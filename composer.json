@@ -1,0 +1,20 @@
+{
+    "name": "wtf/rest",
+    "homepage": "http://framework.wtf",
+    "type": "library",
+    "description": "Package for WTF Framework",
+    "license": "MIT",
+    "prefer-stable": true,
+    "require": {
+        "wtf/core": "^1",
+        "tuupola/slim-jwt-auth": "3.0.0-rc.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wtf\\Rest\\": "src/"
+        }
+    },
+    "replace": {
+        "tisuit/rest": "*"
+    }
+}

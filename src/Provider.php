@@ -17,7 +17,7 @@ class Provider implements ServiceProviderInterface
             $config = $container['config']('jwt', []);
             if (!($config['before'] ?? null)) {
                 $config['before'] = function (ServerRequestInterface $request, array $args) use ($container) {
-                    $token = $request->getAttribute('token');
+                    $token = $request->getAttribute($config['attribute'] ?? 'token');
                     $container['user'] = (is_object($token) && property_exists($token, 'data') ? $token->data : $token);
 
                     return $request;

@@ -18,7 +18,7 @@ class Provider implements ServiceProviderInterface
             if (!($config['before'] ?? null)) {
                 $config['before'] = function (ServerRequestInterface $request, array $args) use ($container) {
                     $token = $request->getAttribute($config['attribute'] ?? 'token');
-                    $container['user'] = (array)(is_object($token) && property_exists($token, 'data') ? $token->data : ($token['data'] ?? $token));
+                    $container['user'] = (array) (is_object($token) && property_exists($token, 'data') ? $token->data : ($token['data'] ?? $token));
 
                     return $request;
                 };

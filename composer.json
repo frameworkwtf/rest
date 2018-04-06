@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
         "wtf/core": "^1",
-        "tuupola/slim-jwt-auth": "3.0.0-rc.5"
+        "tuupola/slim-jwt-auth": "^3"
     },
     "autoload": {
         "psr-4": {
